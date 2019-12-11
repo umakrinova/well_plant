@@ -1,3 +1,5 @@
+package com.example.my_plants;
+
 public class Plant {
     public final String name;
     private final int imageResource;
