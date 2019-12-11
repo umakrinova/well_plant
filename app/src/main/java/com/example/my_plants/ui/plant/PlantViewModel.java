@@ -1,4 +1,4 @@
-package com.example.my_plants.ui.dashboard;
+package com.example.my_plants.ui.plant;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -10,7 +10,7 @@ public class PlantViewModel extends ViewModel {
 
     public PlantViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is plants fragment");
+        mText.setValue("This is plant fragment");
     }
 
     public LiveData<String> getText() {

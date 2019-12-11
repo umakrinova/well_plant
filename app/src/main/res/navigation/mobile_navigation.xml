@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_friends"
-        android:name="com.example.my_plants.ui.home.HomeFragment"
+        android:name="com.example.my_plants.ui.friends.FriendsFragment"
         android:label="@string/title_friends"
         tools:layout="@layout/fragment_home" />
 
@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/navigation_settings"
-        android:name="com.example.my_plants.ui.notifications.NotificationsFragment"
+        android:name="com.example.my_plants.ui.settings.SettingsFragment"
         android:label="@string/title_settings"
         tools:layout="@layout/fragment_notifications" />
 </navigation>

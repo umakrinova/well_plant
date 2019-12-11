@@ -16,12 +16,12 @@ import com.example.my_plants.R;
 
 public class PlantFragment extends Fragment {
 
-    private com.example.my_plants.ui.dashboard.PlantViewModel plantViewModel;
+    private com.example.my_plants.ui.plant.PlantViewModel plantViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         plantViewModel =
-                ViewModelProviders.of(this).get(com.example.my_plants.ui.dashboard.PlantViewModel.class);
+                ViewModelProviders.of(this).get(com.example.my_plants.ui.plant.PlantViewModel.class);
         View root = inflater.inflate(R.layout.fragment_plant, container, false);
         final TextView textView = root.findViewById(R.id.text_plant_name);
         plantViewModel.getText().observe(this, new Observer<String>() {
