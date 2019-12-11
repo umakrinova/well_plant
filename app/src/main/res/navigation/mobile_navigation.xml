@@ -13,9 +13,9 @@
 
     <fragment
         android:id="@+id/navigation_plants"
-        android:name="com.example.my_plants.ui.dashboard.DashboardFragment"
+        android:name="com.example.my_plants.ui.plant.PlantFragment"
         android:label="@string/title_plants"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_plant" />
 
     <fragment
         android:id="@+id/navigation_settings"
