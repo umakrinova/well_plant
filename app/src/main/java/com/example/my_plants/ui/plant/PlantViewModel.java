@@ -1,16 +1,16 @@
-package com.example.my_plants.ui.plant;
+package com.example.my_plants.ui.dashboard;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class PlantViewModel extends ViewModel {
+public class DashboardViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public PlantViewModel() {
+    public DashboardViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is plant fragment");
+        mText.setValue("This is plants fragment");
     }
 
     public LiveData<String> getText() {
