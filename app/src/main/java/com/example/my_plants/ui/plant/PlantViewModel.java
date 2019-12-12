@@ -14,14 +14,12 @@ public class PlantViewModel extends ViewModel {
             new Plant("MySon", 2, "test")
     };
 
-    private MutableLiveData<String> mText;
+    private String mText;
 
     public PlantViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue(plants[0].getName());
+        mText = new String();
+        mText = plants[0].getName();
     }
 
-    public LiveData<String> getText() {
-        return mText;
-    }
+    public String getText() {return mText; }
 }
