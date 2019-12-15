@@ -55,7 +55,7 @@ public class PlantAdapter extends BaseAdapter {
             convertView = layoutInflater.inflate(R.layout.single_plant, null);
 
             //final ImageView imageViewCoverArt = (ImageView)convertView.findViewById(R.id.imageview_cover_art);
-            final TextView nameTextView = (TextView)convertView.findViewById(R.id.plant_name);
+            final TextView nameTextView = (TextView)convertView.findViewById(R.id.text_plant_name);
 
             final ViewHolder viewHolder = new ViewHolder(nameTextView);
             convertView.setTag(viewHolder);

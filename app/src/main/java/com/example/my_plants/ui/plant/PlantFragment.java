@@ -20,7 +20,8 @@ public class PlantFragment extends Fragment {
 
 
     private Plant[] plants = {
-            new Plant("MySon", 2, "test")
+            new Plant("MySon", 2, "test"),
+            new Plant("Second Son", 1, "test")
     };
 
     private com.example.my_plants.ui.plant.PlantViewModel plantViewModel;
@@ -29,16 +30,18 @@ public class PlantFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         plantViewModel =
                 ViewModelProviders.of(this).get(com.example.my_plants.ui.plant.PlantViewModel.class);
+        final PlantAdapter plantAdapter = new PlantAdapter(this.getContext(), plants);
 
         View root = inflater.inflate(R.layout.fragment_plant, container, false);
-        final TextView textView = root.findViewById(R.id.text_plant_name);
+        View singleView = inflater.inflate(R.layout.single_plant, null);
+
+
+        final TextView textView = singleView.findViewById(R.id.text_plant_name);
 
         final GridView gridView = root.findViewById(R.id.plant_grid);
 
-        final PlantAdapter plantAdapter = new PlantAdapter(this.getContext(), plants);
         gridView.setAdapter(plantAdapter);
-
-        textView.setText(plantViewModel.getText());
+        //textView.setText(plantViewModel.getText());
 
         return root;
     }
