@@ -1,9 +1,11 @@
 package com.example.my_plants.ui.friends;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.TextView;
 
@@ -15,6 +17,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.my_plants.Friend;
 import com.example.my_plants.Plant;
+import com.example.my_plants.PlantWindow;
 import com.example.my_plants.R;
 import com.example.my_plants.ui.friends.FriendAdapter;
 import com.example.my_plants.ui.plant.PlantAdapter;
@@ -46,6 +49,18 @@ public class FriendsFragment extends Fragment {
         final GridView gridView = root.findViewById(R.id.friend_grid);
 
         gridView.setAdapter(friendAdapter);
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView parent, View view, int position, long id) {
+                Friend friend = friends[position];
+
+                Intent plantIntent = new Intent(getContext(), PlantWindow.class);
+                plantIntent.putExtra("FRIEND_NAME", friend.getName());
+                startActivity(plantIntent);
+
+                friendAdapter.notifyDataSetChanged();
+            }
+        });
         //textView.setText(plantViewModel.getText());
 
         return root;
