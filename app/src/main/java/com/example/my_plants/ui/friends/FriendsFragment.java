@@ -23,8 +23,10 @@ public class FriendsFragment extends Fragment {
 
 
     private Friend[] friends = {
-            new Friend("MyFriend", 2, "test"),
-            new Friend("Second Friend", 1, "test")
+            new Friend("Dasha",R.drawable.dasha,
+                    "https://krrot.net/wp-content/uploads/2018/04/spatifilum-567x650.jpg"),
+            new Friend("Dasha",R.drawable.dasha,
+                    "https://krrot.net/wp-content/uploads/2018/04/spatifilum-567x650.jpg")
     };
 
     private com.example.my_plants.ui.friends.FriendsViewModel friendViewModel;
