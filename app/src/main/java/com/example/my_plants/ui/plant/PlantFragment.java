@@ -20,8 +20,8 @@ public class PlantFragment extends Fragment {
 
 
     private Plant[] plants = {
-            new Plant("MySon", 2, "test"),
-            new Plant("Second Son", 1, "test")
+            new Plant("MySon", R.drawable.spatifilum,
+    "https://krrot.net/wp-content/uploads/2018/04/spatifilum-567x650.jpg")
     };
 
     private com.example.my_plants.ui.plant.PlantViewModel plantViewModel;
