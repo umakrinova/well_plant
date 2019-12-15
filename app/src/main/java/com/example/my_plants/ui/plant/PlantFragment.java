@@ -45,7 +45,18 @@ public class PlantFragment extends Fragment {
 
         gridView.setAdapter(plantAdapter);
 
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView parent, View view, int position, long id) {
+                Plant plant = plants[position];
 
+                Intent plantIntent = new Intent(getContext(), PlantWindow.class);
+                plantIntent.putExtra("PLANT_NAME", plant.getName());
+                startActivity(plantIntent);
+
+                plantAdapter.notifyDataSetChanged();
+            }
+        });
 
         //textView.setText(plantViewModel.getText());
 
