@@ -1,9 +1,11 @@
 package com.example.my_plants.ui.plant;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.TextView;
 
@@ -14,6 +16,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.my_plants.Plant;
+import com.example.my_plants.PlantWindow;
 import com.example.my_plants.R;
 
 public class PlantFragment extends Fragment {
@@ -41,6 +44,9 @@ public class PlantFragment extends Fragment {
         final GridView gridView = root.findViewById(R.id.plant_grid);
 
         gridView.setAdapter(plantAdapter);
+
+
+
         //textView.setText(plantViewModel.getText());
 
         return root;
