@@ -11,8 +11,6 @@ import android.widget.TextView
 import com.example.my_plants.Plant
 import com.example.my_plants.R
 
-import com.squareup.picasso.Picasso
-
 
 class PlantAdapter// 1
 (private val mContext: Context, private val plants: Array<Plant>) : BaseAdapter() {

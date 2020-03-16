@@ -11,16 +11,13 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import com.example.my_plants.*
 
-import com.example.my_plants.Plant
-import com.example.my_plants.PlantWindow
-import com.example.my_plants.R
+import com.example.my_plants.PlantsProvider.Companion.plants
 
 class PlantFragment : Fragment() {
 
-
-    private val plants = arrayOf(Plant("MySon", R.drawable.spatifilum,
-            "https://krrot.net/wp-content/uploads/2018/04/spatifilum-567x650.jpg"))
+    val plants = PlantsProvider.plants
 
     private var plantViewModel: com.example.my_plants.ui.plant.PlantViewModel? = null
 
@@ -49,7 +46,7 @@ class PlantFragment : Fragment() {
             plantAdapter.notifyDataSetChanged()
         }
 
-        //textView.setText(plantViewModel.getText());
+        //textView.setText(plantViewModel.getText())
 
         return root
     }
