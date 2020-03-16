@@ -6,13 +6,13 @@ import androidx.lifecycle.ViewModel
 
 class SettingsViewModel : ViewModel() {
 
-    private val mText: MutableLiveData<String>
+//    private val mText: MutableLiveData<String>
 
-    val text: LiveData<String>
-        get() = mText
+//    val text: LiveData<String>
+//        get() = mText
 
     init {
-        mText = MutableLiveData()
-        mText.value = "This is settings fragment"
+//        mText = MutableLiveData()
+//        mText.value = "This is settings fragment"
     }
 }

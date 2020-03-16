@@ -22,6 +22,7 @@
 
         <activity android:name=".PlantWindow"></activity>
         <activity android:name=".FriendWindow"></activity>
+        <activity android:name=".SettingsWindow"></activity>
     </application>
 
 </manifest>

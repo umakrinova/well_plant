@@ -1,4 +1,4 @@
 package com.example.my_plants
 
-class Friend(val name: String, val imageResource: Int, val imageUrl: String)
+class Friend(val name: String, val FriendID: Int, val imageUrl: String)
 
