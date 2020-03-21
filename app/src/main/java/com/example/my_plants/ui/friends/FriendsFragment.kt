@@ -19,9 +19,8 @@ import com.example.my_plants.ui.plant.PlantAdapter
 class FriendsFragment : Fragment() {
 
 
-    private val friends = arrayOf(Friend("Dasha", R.drawable.dasha,
-            "https://krrot.net/wp-content/uploads/2018/04/spatifilum-567x650.jpg"), Friend("Dasha", R.drawable.dasha,
-            "https://krrot.net/wp-content/uploads/2018/04/spatifilum-567x650.jpg"))
+    private val friends = arrayOf(Friend("Dasha", R.drawable.dasha, "dasha@example.com"),
+            Friend("Dasha", R.drawable.dasha, "dasha@example.com"))
 
     private var friendViewModel: com.example.my_plants.ui.friends.FriendsViewModel? = null
 

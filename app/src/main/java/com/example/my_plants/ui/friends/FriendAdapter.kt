@@ -53,7 +53,7 @@ class FriendAdapter// 1
         }
 
         val viewHolder = convertView.tag as ViewHolder
-        viewHolder.imageViewCoverArt.setImageResource(friend.FriendID)
+        viewHolder.imageViewCoverArt.setImageResource(friend.imageSource)
 
         // Picasso.with(mContext).load(friend.getImageUrl()).into(viewHolder.imageViewCoverArt);
         viewHolder.nameTextView.text = friend.name
