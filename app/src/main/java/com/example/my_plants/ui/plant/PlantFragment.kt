@@ -17,9 +17,9 @@ import com.example.my_plants.PlantsProvider.Companion.plants
 
 class PlantFragment : Fragment() {
 
-    val plants = PlantsProvider.plants
+    private val plants = PlantsProvider.plants
 
-    private var plantViewModel: com.example.my_plants.ui.plant.PlantViewModel? = null
+    private var plantViewModel: PlantViewModel? = null
 
     override fun onCreateView(inflater: LayoutInflater,
                               container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -38,15 +38,17 @@ class PlantFragment : Fragment() {
 
         gridView.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
             val plant = plants[position]
+            val name = plant.name
 
             val plantIntent = Intent(context, PlantWindow::class.java)
             plantIntent.putExtra("PLANT_NAME", plant.name)
+            plantIntent.putExtra("PLANT_IMAGE", plant.imageID)
+            plantIntent.putExtra("PLANT_DAY", plant.water_day)
+            plantIntent.putExtra("PLANT_MONTH", plant.water_month)
             startActivity(plantIntent)
 
             plantAdapter.notifyDataSetChanged()
         }
-
-        //textView.setText(plantViewModel.getText())
 
         return root
     }

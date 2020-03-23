@@ -10,11 +10,10 @@
 
         <ImageView
             android:contentDescription="@string/app_name"
-            android:id="@+id/imageview_cover_art"
+            android:id="@+id/imageview_plant"
             android:layout_width="wrap_content"
             android:layout_height="90dp"
             android:scaleType="centerCrop" />
-
 
     </FrameLayout>
 
@@ -29,5 +28,17 @@
         android:textSize="24sp"
         android:textStyle="bold" />
 
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <CalendarView
+            android:id="@+id/calendar_plant"
+            android:layout_width="wrap_content"
+            android:layout_height="350dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop" />
+
+    </FrameLayout>
 
 </LinearLayout>

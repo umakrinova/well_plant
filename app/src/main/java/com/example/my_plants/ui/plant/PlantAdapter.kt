@@ -49,7 +49,7 @@ class PlantAdapter// 1
         }
 
         val viewHolder = convertView.tag as ViewHolder
-        viewHolder.imageViewCoverArt.setImageResource(plant.FriendID)
+        viewHolder.imageViewCoverArt.setImageResource(plant.imageID)
 
         //Picasso.with(mContext).load(plant.getImageUrl()).into(viewHolder.imageViewCoverArt);
         viewHolder.nameTextView.text = plant.name
